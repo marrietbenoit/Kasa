@@ -1,0 +1,67 @@
+
+/* Main content */
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+
+/* intro */
+main p {
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+/*cards grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  list-style: none;
+  padding: 30px;
+  margin: 0;
+  background: #f6f6f6;
+  border-radius: 25px;
+}
+
+/* Remove default spacing */
+.cards li {
+  min-width: 0;
+}
+
+/* Tablet*/
+@media (max-width: 1024px) {
+  main {
+    padding: 30px 20px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+/* Mobile*/
+@media (max-width: 600px) {
+  main {
+    padding: 20px;
+  }
+
+  main h1 {
+    font-size: 24px;
+  }
+
+  main p {
+    font-size: 16px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+    background: transparent;
+  }
+}

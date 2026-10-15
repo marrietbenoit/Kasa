@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './components/About'
 import Error from './components/Error'
+import Logement from './pages/Logement'
 
 function Router() {
   return (
@@ -9,6 +10,7 @@ function Router() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="*" element={<Error />} />
+      <Route path="/logement/:id" element={<Logement />} />
     </Routes>
   )
 }

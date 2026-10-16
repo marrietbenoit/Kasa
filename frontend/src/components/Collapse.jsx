@@ -2,8 +2,10 @@ import { useState } from 'react'
 import '../styles/Collapse.css'
 
 function Collapse({ title, children }) {
+  // Keep track of whether the dropdown is open or closed
   const [isOpen, setIsOpen] = useState(false)
 
+  // Display the title and toggle the content when the button is clicked
   return (
     <section className={`collapse ${isOpen ? 'open' : ''}`}>
       <button

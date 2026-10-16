@@ -1,4 +1,3 @@
-
 .banner {
   position: relative;
   display: flex;
@@ -8,6 +7,8 @@
   margin: 30px 0;
   padding: 20px;
   border-radius: 25px;
+
+  /* Keep the background image centred and cover the banner */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,6 +22,7 @@
   margin: 0;
 }
 
+/* Adapt the banner size and title alignment to mobile screens */
 @media (max-width: 600px) {
   .banner {
     min-height: 111px;

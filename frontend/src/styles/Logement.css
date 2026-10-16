@@ -1,3 +1,4 @@
+/* Centre the logement page and limit its width on larger screens */
 .logement {
   width: 100%;
   max-width: 1240px;
@@ -7,12 +8,55 @@
   text-align: left;
 }
 
+/* Keeps the arrows and counter positioned inside the carousel */
+.logement__carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+/* Fill the carousel area without stretching the photo */
 .logement__cover {
   display: block;
   width: 100%;
   max-width: 100%;
   height: 415px;
   object-fit: cover;
+}
+
+/* Keep the arrows vertically centred on the image */
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 48px;
+  padding: 0 20px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.carousel__arrow--left {
+  left: 0;
+}
+
+.carousel__arrow--right {
+  right: 0;
+}
+
+/* Centre the image counter horizontally */
+.carousel__counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 18px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .logement__title {
@@ -28,28 +72,37 @@
   font-size: 18px;
   margin: 0;
 }
-.logement_carousel {
-   width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-  border-radius: 25px;
-}
-/* Tablet */
+
+/* Reduce the image height on tablet screens */
 @media (max-width: 1024px) {
   .logement__cover {
     height: 320px;
   }
 }
 
-/* Mobile */
+/* Adapt the layout and carousel controls to mobile screens */
 @media (max-width: 600px) {
   .logement {
     margin-bottom: 25px;
   }
 
+  .logement__carousel {
+    border-radius: 10px;
+  }
+
   .logement__cover {
     height: 255px;
     border-radius: 10px;
+  }
+
+  .carousel__arrow {
+    font-size: 28px;
+    padding: 0 10px;
+  }
+
+  .carousel__counter {
+    bottom: 10px;
+    font-size: 14px;
   }
 
   .logement__title {

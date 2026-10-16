@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import '../styles/Card.css'
 
-// Display main image taken from props
+// Display cover image taken from props
 function Card({ logement }) {
   return (
     <Link

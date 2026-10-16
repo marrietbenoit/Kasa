@@ -24,6 +24,7 @@
   max-width: 100%;
   height: 415px;
   object-fit: cover;
+  
 }
 
 /* Keep the arrows vertically centred on the image */
@@ -113,5 +114,24 @@
 
   .logement__location {
     font-size: 14px;
+  }
+}
+
+/* Animate the new image reveal */
+.logement__cover {
+  animation: photoReveal 1400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+/* Expand the image until it fills the carousel */
+@keyframes photoReveal {
+  from {
+    clip-path: circle(0% at 50% 50%);
+    transform: scale(1.2);
+    filter: brightness(0.5) saturate(1.3);
+  }
+
+  to {
+    clip-path: circle(150% at 50% 50%);
+    transform: scale(1);
+    filter: brightness(1) saturate(1);
   }
 }

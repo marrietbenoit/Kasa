@@ -31,11 +31,12 @@ function Slideshow({ pictures }) {
   // Display the current image and show the controls if there are several pictures
   return (
     <div className="logement__carousel">
-      <img
-        className="logement__cover"
-        src={pictures[currentIndex]}
-        alt={`Photo ${currentIndex + 1} du logement`}
-      />
+     <img
+  key={currentIndex}
+  className="logement__cover"
+  src={pictures[currentIndex]}
+  alt={`Photo ${currentIndex + 1} du logement`}
+/>
 
       {pictures.length > 1 && (
         <>

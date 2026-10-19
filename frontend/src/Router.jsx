@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom'
+
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './components/About'
 import Error from './components/Error'
@@ -11,11 +12,14 @@ function Router() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
 
-      {/* Use the logement ID from the URL to display the correct accommodation */}
+      {/* Display the selected accommodation */}
       <Route path="/logement/:id" element={<Logement />} />
 
-      {/* Display the error page when the URL does not match another route */}
-      <Route path="*" element={<Error />} />
+      {/* Dedicated error page */}
+      <Route path="/404" element={<Error />} />
+
+      {/* Redirect unknown URLs to the error page */}
+      <Route path="*" element={<Navigate to="/404" replace />} />
     </Routes>
   )
 }

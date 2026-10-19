@@ -8,7 +8,7 @@ function Banner({ image, children }) {
       style={{
         // Add a dark overlay so the content stands out against the background image
         backgroundImage: `
-          linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
           url(${image})
         `
       }}
